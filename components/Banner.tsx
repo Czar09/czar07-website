@@ -7,12 +7,12 @@ function Banner({ }: Props) {
         <div>
             <div className="container px-8 py-48 mx-auto lg:px-4">
                 <div className="flex flex-col w-full mb-12 text-left lg:text-center">
-                    <h2 className="mb-1 text-xs font-semibold tracking-widest text-green-400 uppercase title-font"
+                    <h2 className="mb-1 text-lg font-semibold tracking-widest text-white uppercase title-font"
                         data-aos="fade-up" data-aos-duration="3000">World-Class
                         The organization for everything
                     </h2>
 
-                    <h1 className="mb-6 pt-4 text-2xl font-semibold tracking-tighter text-purple-300 sm:text-5xl title-font"
+                    <h1 className="mb-6 pt-4 text-2xl font-semibold tracking-tighter text-white sm:text-5xl title-font  brightness-200"
                         data-aos="fade-up" data-aos-duration="3000">
                         Czar
                     </h1>

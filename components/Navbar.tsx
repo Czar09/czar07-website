@@ -8,7 +8,7 @@ function Navbar({ }: Props) {
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="#">
                     <span className="ml-6 text-2xl tracking-widest hover:text-gray-400">
-                        <img className="h-[80px] w-[80px]"
+                        <img className="w-14  rounded-full"
                             src="/czarlogo (2).png" /></span>
                 </a>
 
