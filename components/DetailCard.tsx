@@ -4,8 +4,8 @@ import React from 'react'
 type Props = {}
 
 function DetailCard({ }: Props) {
-    return (
-        <article className='flex flex-col items-center space-y-7 rounded-2xl flex-shrink-0 w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-purple-400 p-10 opacity-100
+  return (
+    <article className='flex flex-col items-center space-y-7 rounded-2xl flex-shrink-0 w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-purple-400 p-10 opacity-100
     cursor-pointer transition-opacity duration-200'>
       <img
         className='w-32 h-32 rounded-full md:w-[200px] md:h-[200px]'
@@ -21,7 +21,7 @@ function DetailCard({ }: Props) {
       </div>
 
     </article>
-    )
+  )
 }
 
 export default DetailCard
