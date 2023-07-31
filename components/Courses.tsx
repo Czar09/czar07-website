@@ -47,7 +47,7 @@ const Courses = () => {
   return (
     <div>
          {
-   showModel ? <div className={`top-[30%] md:top-[30%] lg:right-[40%] text-white md:right-[30%] sm:right-[18%] right-[5%]  z-10 ${showModel ? "fixed": "sticky"}`} >
+   showModel ? <div className={`top-[30%] md:top-[30%] lg:right-[40%] text-white md:right-[30%] sm:right-[18%] right-[5%]  z-10 ${showMoel ? "fixed": "sticky"}`} >
   <div className='sm:scale-125 lg:scale-150  '>
   <div className='flex items-center justify-center bg-gradient-to-r from-gray-700 to-black p-7 lg:p-6 rounded-3xl shadow-2xl border  lg:w-[20vw] md:w-96 w-64'>
         <div className='w-full'>
