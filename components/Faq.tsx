@@ -9,7 +9,7 @@ function Faq({ }: Props) {
     return (
         <div className='px-6'>
             <div className='container mx-auto my-24 text-center'>
-                <span className='text-3xl text-gray-900'>FAQs</span>
+                <span className='text-xl font-bold text-gray-900'>FAQs</span>
             </div>
 
 

@@ -4,12 +4,12 @@ type Props = {}
 
 function Navbar({ }: Props) {
     return (
-        <header id="header" className="text-white body-font bg-gradient-to-r from-gray-900 to-black">
+        <header id="header" className="text-white body-font bg-gradient-to-r from-[#19142a] via-[#100d26] to-[#100D26]">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="#">
-                    <span className="ml-6 text-2xl tracking-widest hover:text-gray-400">
-                        <img className="w-14  rounded-full"
-                            src="/czarlogo (2).png" /></span>
+                    <span className="ml-6 text-2xl tracking-widest  font-bold hover:text-purple-500">
+                        {/* <img className="w-14  rounded-full" src="/czarlogo (2).png" /> */}
+                            C-Zar</span>
                 </a>
 
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center ">
