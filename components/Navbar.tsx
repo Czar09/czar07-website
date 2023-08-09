@@ -20,6 +20,8 @@ function Navbar({ }: Props) {
                         href="#service">Services</Link>
                     <Link className="mr-5 text-md font-medium hover:text-purple-400" data-aos="fade-left" data-aos-duration="2000"
                         href="/contact">Contact</Link>
+                    <Link className="mr-5 text-md font-medium hover:text-purple-400" data-aos="fade-left" data-aos-duration="2000"
+                        href="/signin">Sign-in</Link>
                 </nav>
             </div>
         </header>
