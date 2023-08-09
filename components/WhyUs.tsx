@@ -22,11 +22,11 @@ const WhyUs = () => {
     ]
 
   return (
-    <div className='bg-white lg:p-44'>
+    <div className='bg-white lg:p-44' id= "about">
         <div className='flex justify-center flex-col lg:flex-row'>
             <div className='lg:w-[60%] p-4'>
                 <h2 className='uppercase text-xl tracking-widest text-center font-bold'>Total  revenue genrated</h2>
-                <h2 className='text-[60px] font-bold text-purple-600 text-center'>₹13,00,000</h2>
+                <h2 className='text-[30px] sm:text-[60px] font-bold text-purple-600 text-center'>₹13,00,000</h2>
                 <div className='grid grid-cols-2 gap-5 mt-3'>
                     {
                     stats.map(stat=>(

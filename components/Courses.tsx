@@ -5,6 +5,7 @@ const Courses = () => {
 
     const tutorials = [
         {
+          "id": "1",
             "img": "https://cdn.pixabay.com/photo/2022/01/01/15/46/brain-6907898_640.png",
             "title": "Machine Learning A-Z™",
             "price": "420",
@@ -13,6 +14,7 @@ const Courses = () => {
             "disp":"Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included"
         },
         {
+          "id": "2",
             "img": "https://tse4.mm.bing.net/th?id=OIP.Z32GW2qamvFULwSypmuOjAHaEK&pid=Api&P=0&h=180",
             "title": "100 Days of Code™",
             "price": "599",
@@ -21,6 +23,7 @@ const Courses = () => {
             "disp":"Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!"
         },
         {
+          "id": "3",
             "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/ed/d25c0d25114924a34754928dbf8273/Front-end-dev-ProCert.png?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25",
             "title": "Meta Front-End Developer™",
             "price": "799",
@@ -29,6 +32,7 @@ const Courses = () => {
             "disp":"Launch your career as a front-end developer. Build job-ready skills for an in-demand career. No degree or prior experience required to get started."
         },
         {
+          "id": "4",
             "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/18/2aa16c328a457cb910aa933bf2cd87/Professional-Certificate-Cloud-App.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25",
             "title": "IBM Full Stack Software Developer",
             "price": "499",
@@ -44,42 +48,18 @@ const Courses = () => {
         setShowModel(!showModel)
     }
 
+    interface course {
+      price: number,
+      price_before: number
+    }
+
   return (
     <div>
-         {
-   showModel ? <div className={`top-[30%] md:top-[30%] lg:right-[40%] text-white md:right-[30%] sm:right-[18%] right-[5%]  z-10 ${showModel ? "fixed": "sticky"}`} >
-  <div className='sm:scale-125 lg:scale-150  '>
-  <div className='flex items-center justify-center bg-gradient-to-r from-gray-700 to-black p-7 lg:p-6 rounded-3xl shadow-2xl border  lg:w-[20vw] md:w-96 w-64'>
-        <div className='w-full'>
-          <div className='flex justify-between items-center mb-4'>
-            <h2 className='text-sm font-bold'>Setup Payment Method here</h2>
-            <button className='font-semibold text-md ' onClick={buyingCourse}><AiOutlineClose/></button>
-          </div>
-          <div className='flex flex-col gap-2 w-full  text-sm text-slate-200'>
-            <div className='flex items-center justify-between gap-x-3'>
-                <input type="text" placeholder='COUPON CODE' className='px-3 w-full py-1 text-[8px] rounded-full outline-none text-black' />
-                <button className='text-[8px] w-full border bg-white text-black rounded-full py-1'>Apply Coupon</button>
-            </div>
-            <div className='flex flex-col  py-2 px-4  w-full'>
-              <Link href="#">Pay via UPI</Link>
-            </div >
-            <div className='flex flex-col  py-2 px-4  w-full'>
-              <Link href="#">Pay via Credit Card</Link>
-            </div >
-            <div className='flex flex-col  py-2 px-4  w-full'>
-              <Link href="#">EMI</Link>
-            </div >
-          </div>
-        </div>
-  </div>
-</div>
-</div>: null
-}
-
+       
 
         <section className={`text-gray-600 body-font bg-white transition-all duration-500 ${showModel ? "blur-md brightness-90": "blur-0"}`}>
   <div className="container px-5 py-10 mx-auto">
-            <h1 className='text-center text-2xl font-bold text-black py-10 '>Courses</h1>
+            <h1 className='text-center text-[32px] text-black font-bold py-10 '>Courses</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 -m-4">
       {
         tutorials.map(course=>(
@@ -94,7 +74,7 @@ const Courses = () => {
                 <h6 className=''>₹{course.price} /
                 <small className='px-1 text-green-600 font-medium'>
                     Saving {
-                        Math.floor(course.price / course.price_before*100) 
+                        Math.floor(Number(course.price) / Number(course.price_before)*100) 
                     }%
                     </small></h6>
               <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
@@ -109,7 +89,9 @@ const Courses = () => {
                 </svg>6
               </span>
             </div>
-          <button onClick={buyingCourse} className='border w-full my-2 py-2 bg-gradient-to-r from-gray-700 to-black rounded-full text-white'>Buy Course</button>
+          <div className='w-full py-4'>
+          <Link href={"/courses/"+ course.id} className='border w-full my-2 px-6 py-2 bg-gradient-to-r from-gray-700 to-black rounded-full text-white'>Explore Course</Link>
+          </div>
           </div>
         </div>
       </div>
