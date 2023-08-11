@@ -18,9 +18,9 @@ const page = () => {
         ]
 
   return (
-    <div id="service">
+    <div id="service" className='bg-[url(https://juspay.in/static/bg_circular_dotted_white.png)] bg-no-repeat bg-cover '>
        
-        <div className='pt-10 px-4 md:px-20 bg-white'>
+        <div className='pt-10 px-4 md:px-20 '>
             <h1 className='text-center text-[32px] text-black font-bold'>Services</h1>
             <h2 className=' text-center text-[24px] pt-4 tracking-wide'>Unique technologies & modern approach</h2>
 

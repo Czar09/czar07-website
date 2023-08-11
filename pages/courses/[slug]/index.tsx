@@ -94,7 +94,7 @@ const index = () => {
                  <div className=" py-1  w-full bg-indigo-600">
                       <h3 className="text-sm md:text-md text-white text-center uppercase px-2 md:p-2">Avail our Special Offer and make the best deal for you ! </h3>
                       </div>
-                  <section className="flex flex-col md:relative  text-white  bg-[url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=4000)] bg-no-repeat bg-cover bg-center h-[45vh] md:px-6 md:py-10 py-3 ">
+                  <section className="flex flex-col md:relative  text-white  bg-[url(https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=4000)] bg-no-repeat bg-cover bg-center lg:h-[45vh] md:px-6 md:py-10 py-3 ">
                     <div className="xl:container">
                       <div className="px-3 md:px-0">
                         <h1 className="text-3xl font-semibold">{course.title}</h1>
@@ -132,17 +132,15 @@ const index = () => {
                       </div>
                     </div>
 
-                    <div className="mx-3 md:mx-0 overflow-hidden text-black md:absolute  border shadow-md hover:shadow-lg rounded-xl md:top-12 md:w-[25%] md:right-24 lg:right-52  top-0 right-0 bg-white mt-6 md:mt-0">
+                    <div className="mx-3 md:mx-0 overflow-hidden text-black md:absolute inline  border shadow-md hover:shadow-lg rounded-xl md:top-12 md:w-[25%] md:right-24 lg:right-52  top-0 right-0 bg-white mt-6 md:mt-0">
                       <img className="overflow-hidden h-44 w-full object-cover" src={course.img} alt="" />
                       <div className="py-2 px-3">
                         <h2 className="text-lg font-semibold ">
                           Book {course.title}
                         </h2>
-                        <h2 className="text-md  ">
+                        <h2 className="text-md hidden lg:inline  ">
                           Book {course.disp}
                         </h2>
-                 
-
                         <div className="flex flex-col justify-between mt-4 mb-4">
                         <Link href={"/courses/"+ course.id} onClick={buyingCourse} className='border w-full my-2 px-6 py-2 bg-gradient-to-r from-gray-700 to-black rounded-full text-white text-center'>Buy Course at  ₹{course.price}</Link>
                         </div>
@@ -150,7 +148,7 @@ const index = () => {
                     </div>
                   </section>
                   
-                  <section className='p-4 md:p-8 lg:p-20'>
+                  <section className='p-4 md:p-8 lg:p-20 lg:mt-20'>
                   <h2 className='font-semibold text-2xl py-4'>What you'll learn</h2>
 <div className='grid grid-cols-1 md:grid-cols-2'>
 <div className='flex items-center gap-2'>

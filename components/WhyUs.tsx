@@ -22,7 +22,7 @@ const WhyUs = () => {
     ]
 
   return (
-    <div className='bg-white lg:p-44' id= "about">
+    <div className=' lg:p-44' id= "about">
         <div className='flex justify-center flex-col lg:flex-row'>
             <div className='lg:w-[60%] p-4'>
                 <h2 className='uppercase text-xl tracking-widest text-center font-bold'>Total  revenue genrated</h2>
