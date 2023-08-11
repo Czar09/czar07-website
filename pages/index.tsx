@@ -17,6 +17,8 @@ export default function Home() {
   return (
     <main className='scroll-smooth '>
       <Banner />
+      <div className='px-4 md:px-20'>
+
       <div className='bg-[url(https://juspay.in/img_products_hero.svg)] bg-no-repeat bg-left-bottom'>
       <WhyUs />
       <WorkedWith/>
@@ -24,6 +26,7 @@ export default function Home() {
       <Services/>
       <Courses />
       <Faq />
+      </div>
     </main>
   )
 }
