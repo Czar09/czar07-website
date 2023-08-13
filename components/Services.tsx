@@ -1,7 +1,12 @@
+import Image from 'next/image'
 import React from 'react'
+import { useRouter } from 'next/router'
 
-const page = () => {
 
+const Page = () => {
+
+    const router = useRouter()
+    
         const expertise=[
             {
                 "img": "https://geekyglam.in/images/e1.jpg",
@@ -26,9 +31,9 @@ const page = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-20 pt-14'>
             {
-                expertise.map(service=>(
-                    <div>
-                        <img src={service.img} className='rounded-tl-[50px] rounded-br-[50px]' alt="" />
+                expertise.map((service, index)=>(
+                    <div key={index} onClick={()=>{router.push("/services/" + service.title)}}>
+                        <Image width={768} height={512}  key={index} src={service.img} className='rounded-tl-[50px] rounded-br-[50px]' alt="" />
                         <h2 className='text-[22px] py-6  font-medium tracking-widest text-black'>{service.title}</h2>
                     </div>
                 ))
@@ -39,4 +44,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

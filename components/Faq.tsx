@@ -1,100 +1,50 @@
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import React, { useState } from 'react'
-import { AiOutlineClose } from 'react-icons/ai'
 
 type Props = {}
 
 function Faq({ }: Props) {
 
-    
-const faq = [
-    {
-        id: 1,
-        faq_question: "What will I do If I join",
-        faq_answer: "Eaarn and enjoy your life to the fullest!!!!"
-    },
-    {
-        id: 2,
-        faq_question: "What will I do If I join",
-        faq_answer: "Eaarn and enjoy your life to the fullest!!!! loreskjagdhasg asy dfsdyf sas dta sf "
-    },
-    {
-        id: 3,
-        faq_question: "What will I do If I join",
-        faq_answer: "Eaarn and enjoy your life to the fullest!!!! dsadasds   fwe fwesd fsd fsd ds ds fdsf "
-    },
-    {
-        id: 4,
-        faq_question: "What will I do If I join",
-        faq_answer: "Eaarn and enjoy your life to the fullest!!!!wef ewds fds fds fdsf dsf sdet refer5 34534534"
-    }
-
-]
-
-
-interface Ifaq {
-    id: number;
-    faq_question: string;
-    faq_answer: string;
-  };
-
-  const [isOpen, setIsOpen] = useState(false)
-    const [ans, setAns] = useState<Ifaq>({id:0,faq_question:'tanuj',faq_answer:'tanuj'})
-    const [showModel, setShowModel] = useState(false)
-
-    const buyingCourse = () =>{
-        setShowModel(!showModel)
-    }
-    const handleModel = (id: any) =>{
-        setShowModel(!showModel)
-        faq.map(f=>(
-            f.id == id ? setAns(f): null
-        ))
-    }
-
+    const [isOpen, setIsOpen] = useState(-1)
     return (
-        <div className='p-3 md:p-6 mt-10'>
-                 {
-   showModel ? <div className={`top-[30%] md:top-[30%] lg:right-[40%] text-white md:right-[30%] sm:right-[18%] right-[5%]  z-10 ${showModel ? "fixed": "sticky"}`} >
-  <div className='sm:scale-125 lg:scale-150  '>
-  <div className='flex items-center justify-center bg-gradient-to-r from-gray-700 to-black p-7 lg:p-6 rounded-3xl shadow-2xl border  lg:w-[20vw] md:w-96 w-64'>
-        <div className='w-full'>
-          <div className='flex justify-between items-center mb-4'>
-            <h2 className='text-sm font-bold'>{ans.faq_question}</h2>
-            <button className='font-semibold text-md ' onClick={buyingCourse}><AiOutlineClose/></button>
-          </div>
-          <div className='flex flex-col gap-2 w-full  text-sm text-slate-200 '>
-            <div className='py-2    w-full'>
-               <h3>{ans.faq_answer}</h3>
-            </div >
-          </div>
-        </div>
-  </div>
-</div>
-</div>: null
-}
-           <h2 className='text-center text-[32px] text-black font-bold'>FAQ - Frequently Asked Questions</h2>
-           <div className='p-4 lg:p-10'>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 ">
-                    {
-                        faq.map(f=>(
-                            <div className='flex flex-col'>
-                            <div className='px-8 py-2 bg-indigo-50 rounded-xl cursor-pointer' onClick={()=>handleModel(f.id)}>
-                                <div className='flex items-center justify-between'>
-                                    <h3>{f.faq_question}</h3>
-                                    <i className='text-3xl'>+</i>
-                                </div>
+        <div className='p-6'>
+            <div className='container mx-auto my-24 text-center'>
+            <h2 className='text-center text-[32px] text-black font-bold'>FAQ - Frequently Asked Questions</h2>
+            </div>
+            
+
+            <div className='container -mt-3 rounded-lg  shadow-sm  mx-auto md:py-10 px-6 w-full lg:w-[50%]'>
+
+                {faq.map((item, index) => (
+                    <div className='border-b py-5  border-gray-300' key={index}>
+                        <button type='button' className='flex w-full justify-between items-center' onClick={() => { setIsOpen(isOpen == index ? -1 : index) }}>
+                            <div className='font-medium text-gray-900 text-lg'>
+                                {item.faq_question}
                             </div>
-                            {/* <div className={`bg-white border-b border-r border-l p-10 rounded-b-2xl ${isOpen ? 'inline' : "hidden"}`}>{ans}</div> */}
-                        </div>
-                        ))
-                    }
-                    {
-                        
-                    }
-                </div>
-           </div>
+                            <div>
+                                {isOpen == index ?
+                                    (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-black">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    ) :
+                                    (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-black">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>)
+                                }
+                            </div>
+                        </button>
+                        <motion.div initial={{ y: -100, opacity: 0 }}
+                            transition={{ duration: 1 }}
+                            whileInView={{ opacity: 1, y: 1 }}
+                            className={`${isOpen == index ? 'block' : 'hidden'} + text-gray-400 py-6 leading-relaxed`}>
+                            {item.faq_answer}
+                        </motion.div>
+
+                    </div>
+                ))}
+
+            </div>
+
         </div>
     )
 }
@@ -102,3 +52,23 @@ interface Ifaq {
 export default Faq
 
 
+
+const faq = [
+    {
+        faq_question: "What will I do If I join",
+        faq_answer: "Eaarn and enjoy your life to the fullest!!!!"
+    },
+    {
+        faq_question: "What will I do If I join",
+        faq_answer: "Eaarn and enjoy your life to the fullest!!!!"
+    },
+    {
+        faq_question: "What will I do If I join",
+        faq_answer: "Eaarn and enjoy your life to the fullest!!!!"
+    },
+    {
+        faq_question: "What will I do If I join",
+        faq_answer: "Eaarn and enjoy your life to the fullest!!!!"
+    }
+
+]

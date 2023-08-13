@@ -1,4 +1,5 @@
 import Sidebar from '@/components/Sidebar'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -56,9 +57,9 @@ const index = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -m-4">
       {
         tutorials.map(course=>(
-            <div className="p-4 ">
+            <div className="p-4 " key={course.id}>
         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img className="lg:h-48 md:h-36 h-20 w-full object-cover object-center" src={course.img} alt="blog"/>
+          <Image width={200} height={200} className="lg:h-48 md:h-36 h-20 w-full object-cover object-center" src={course.img} alt="blog"/>
           <div className="p-6">
             <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">TECH</h2>
             <h1 className="title-font text-lg font-medium text-gray-900 mb-3">{course.title}</h1>

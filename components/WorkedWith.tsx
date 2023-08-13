@@ -14,7 +14,7 @@ const WorkedWith = () => {
                 <div className='p-10 lg:p-20'>
                     <div className='flex flex-wrap gap-y-5 lg:gap-y-0 items-center justify-evenly'>
                     {
-                        companies.map(c=>(<Image src={c} width={200} height={100} alt='logo' className='object-cover'/>))
+                        companies.map(c=>(<Image key={c} src={c} width={200} height={100} alt='logo' className='object-cover'/>))
                     }
                     <div/>
                 </div>

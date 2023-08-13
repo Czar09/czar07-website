@@ -18,51 +18,27 @@ const Index = () => {
   const router = useRouter()
 
 
-  const tutorials = [
+  const expertise=[
     {
-      "id": "1",
-        "img": "https://cdn.pixabay.com/photo/2022/01/01/15/46/brain-6907898_640.png",
-        "title": "Machine Learning A-Z™",
-        "price": "420",
-        "price_before": "780",
-        "ratings": "4",
-        "disp":"Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included"
+        "img": "https://geekyglam.in/images/e1.jpg",
+        "title": "Web Development"
     },
     {
-      "id": "2",
-        "img": "https://tse4.mm.bing.net/th?id=OIP.Z32GW2qamvFULwSypmuOjAHaEK&pid=Api&P=0&h=180",
-        "title": "100 Days of Code™",
-        "price": "599",
-        "price_before": "1299",
-        "ratings": "4",
-        "disp":"Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!"
+        "img": "https://img.freepik.com/free-vector/gradient-isometric-nft-concept_52683-62009.jpg?size=626&ext=jpg&ga=GA1.2.1739072392.1687083813&semt=ais",
+        "title": "Blockchain"
     },
     {
-      "id": "3",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/ed/d25c0d25114924a34754928dbf8273/Front-end-dev-ProCert.png?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25",
-        "title": "Meta Front-End Developer™",
-        "price": "799",
-        "price_before": "1599",
-        "ratings": "4",
-        "disp":"Launch your career as a front-end developer. Build job-ready skills for an in-demand career. No degree or prior experience required to get started."
-    },
-    {
-      "id": "4",
-        "img": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/18/2aa16c328a457cb910aa933bf2cd87/Professional-Certificate-Cloud-App.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25",
-        "title": "IBM Full Stack Software Developer",
-        "price": "499",
-        "price_before": "899",
-        "ratings": "4",
-        "disp":"Prepare for a career as a full stack developer. Gain the in-demand skills and hands-on experience to get job-ready in less than 4 months."
-    },
+        "img": "https://geekyglam.in/images/e2.jpg",
+        "title": "SEO"
+    }
 ]
 
 
     return (
-    <div className='bg-white relative'>
-     {/* on mobile devices */}
-     <button className=' bg-indigo-600 text-white py-3 w-full bottom-0 z-50 fixed lg:hidden'>
-                    Start Subscription
+    <div className='bg-white'>
+         {/* on mobile devices */}
+         <button className=' bg-indigo-600 text-white py-3 w-full bottom-0 z-50 fixed lg:hidden'>
+                    Book an Appointment
                     </button>
         {
    showModel ? <div className={`top-[30%] md:top-[30%] lg:right-[40%] text-white md:right-[30%] sm:right-[18%] right-[5%]  z-10 ${showModel ? "fixed": "sticky"}`} >
@@ -90,12 +66,10 @@ const Index = () => {
 
         <div  className={`text-gray-600 body-font bg-white transition-all duration-500 ${showModel ? "blur-md brightness-90": "blur-0"}`}>
             {
-                tutorials.map(course=>(
-                    course.id == router.query.slug ? 
+                expertise.map(course=>(
+                    course.title == router.query.slug ? 
                     <>
-                     
                 <div className="md:pb-10 bg-gradient-to-br from-neutral-100 to-white-100">
-                  
                  <div className=" py-1  w-full bg-indigo-600">
                       <h3 className="text-sm md:text-md text-white text-center uppercase px-2 md:p-2">Avail our Special Offer and make the best deal for you ! </h3>
                       </div>
@@ -137,20 +111,21 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <div className="mx-3 md:mx-0 overflow-hidden text-black md:absolute hidden lg:inline  border shadow-md hover:shadow-lg rounded-xl md:top-12 md:w-[25%] md:right-24 lg:right-52  top-0 right-0 bg-white mt-6 md:mt-0">
-                      <Image width={200} height={200}  className="overflow-hidden h-44 w-full object-cover" src={course.img} alt="" />
+                    <div className="mx-3 md:mx-0 hidden lg:inline overflow-hidden text-black md:absolute border shadow-md hover:shadow-lg rounded-xl md:top-12 md:w-[25%] md:right-24 lg:right-52  top-0 right-0 bg-white mt-6 md:mt-0">
+                      <Image width={200} height={100}  className="overflow-hidden h-44 w-full object-cover" src={course.img} alt="" />
                       <div className="py-2 px-3">
                         <h2 className="text-lg font-semibold ">
                           Book {course.title}
                         </h2>
                         <h2 className="text-md hidden lg:inline  ">
-                          Book {course.disp}
+                          Looking for {course.title} services ? You are at right place.
                         </h2>
                         <div className="flex flex-col justify-between mt-4 mb-4">
-                        <Link href={"/courses/"+ course.id} onClick={buyingCourse} className='border w-full my-2 px-6 py-2 bg-gradient-to-r from-gray-700 to-black rounded-full text-white text-center'>Buy Course at  ₹{course.price}</Link>
+                        <Link href="#" onClick={buyingCourse} className='border w-full my-2 px-6 py-2 bg-gradient-to-r from-gray-700 to-black rounded-full text-white text-center'>Make an Appointment  </Link>
                         </div>
                       </div>
                     </div>
+                   
                   </section>
                   
                   <section className='p-4 md:p-8 lg:p-20 lg:mt-20'>

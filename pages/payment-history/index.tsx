@@ -1,4 +1,5 @@
 import Sidebar from '@/components/Sidebar'
+import Image from 'next/image'
 import React from 'react'
 
 const PaymentHistory = () => {
@@ -15,7 +16,7 @@ const PaymentHistory = () => {
                 <div className='flex justify-between items-center bg-neutral-100 px-4 md:px-10 py-4 rounded-2xl'>
                     <div className=''>
                         <div className='flex gap-2 md:gap-6 '>
-                            <img src="https://tse4.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gAAAA&pid=Api&P=0&h=180" className='w-20 h-20 rounded-full object-center' alt="" />
+                            <Image width={20} height={20} src="https://tse4.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gAAAA&pid=Api&P=0&h=180" className='w-20 h-20 rounded-full object-center' alt="" />
                             <div className='flex flex-col'>
                                 <span className='font-bold text-2xl'>Tanuj Bhatt</span>
                                 <span className='text-xs md:text-sm'>Bought ML Course- II</span>
@@ -30,7 +31,7 @@ const PaymentHistory = () => {
                 <div className='flex justify-between items-center bg-neutral-100 px-4 md:px-10 py-4 rounded-2xl'>
                     <div className=''>
                         <div className='flex gap-2 md:gap-6 '>
-                            <img src="https://tse4.mm.bing.net/th?id=OIP.4nxEKkPEv_-B48N6X4gFAAAAAA&pid=Api&P=0&h=180" className='w-20 h-20 rounded-full object-center' alt="" />
+                            <Image width={20} height={20} src="https://tse4.mm.bing.net/th?id=OIP.4nxEKkPEv_-B48N6X4gFAAAAAA&pid=Api&P=0&h=180" className='w-20 h-20 rounded-full object-center' alt="" />
                             <div className='flex flex-col'>
                                 <span className='font-bold text-2xl'>CZAR</span>
                                 <span className='text-xs md:text-sm'>Refund Process Completed</span>
@@ -45,7 +46,7 @@ const PaymentHistory = () => {
                 <div className='flex justify-between items-center bg-neutral-100 px-4 md:px-10 py-4 rounded-2xl'>
                     <div className=''>
                         <div className='flex gap-2 md:gap-6 '>
-                            <img src="https://tse4.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gAAAA&pid=Api&P=0&h=180" className='w-20 h-20 rounded-full object-center' alt="" />
+                            <Image width={20} height={20} src="https://tse4.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gAAAA&pid=Api&P=0&h=180" className='w-20 h-20 rounded-full object-center' alt="" />
                             <div className='flex flex-col'>
                                 <span className='font-bold text-2xl'>Tanuj Bhatt</span>
                                 <span className='text-xs md:text-sm'>Bought ML Course</span>
