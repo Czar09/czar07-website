@@ -3,12 +3,12 @@ import React from 'react'
 
 const profile = () => {
   return (
-    <div className='p-10'>
-        <div className='flex '>
-            <div className='w-[20vw] '>
+    <div className='lg:p-10 p-5'>
+        <div className='flex flex-col lg:flex-row'>
+            <div className='w-full lg:w-[20vw]  '>
                 <Sidebar/>
             </div>
-            <div className=' w-full h-screen px-10'>
+            <div className=' w-full  lg:px-10 pt-6 md:pt-0'>
               <h2 className='text-2xl font-bold'>Welcome Back, Tanuj Bhatt🖐️ </h2>
               <div className=' flex gap-4 flex-col mt-10'>
                   <div>
