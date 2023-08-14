@@ -20,10 +20,10 @@ interface LayoutProps {
 const Layout = ({handleClick, isSomeActive, data, turn, setTurn}:LayoutProps) => {
   return (
     <div className='items-center flex flex-col lg:w-7/12 lg:mt-7 w-full my-5 px-4'>
-        <span className='text-3xl px-6 py-3 text-white rounded-md bg-gradient-to-r bg-purple-600'>
+        <span className='text-xl md:text-3xl lg:text-3.5xl px-6 py-3 text-white rounded-md bg-gradient-to-r bg-purple-600'>
             Frequently Asked Questions
         </span>
-      <div className='flex items-center justify-between w-full mb-6 lg:justify-end'>
+      {/* <div className='flex items-center justify-between w-full mb-6 lg:justify-end'>
           <button
               className="flex items-center mr-3 space-x-1 text-sm font-bold lg:text-base lg:space-x-2 py-2 px-4 bg-slate-50"
               onClick={handleClick}
@@ -38,7 +38,7 @@ const Layout = ({handleClick, isSomeActive, data, turn, setTurn}:LayoutProps) =>
                <Image src={down} alt="" width={40} height={40}/>
               </div>
             </button>
-      </div>
+      </div> */}
 
       {data.map((el,i)=>{
         return (
