@@ -1,31 +1,26 @@
-import { BsLaptop, BsBook } from "react-icons/bs";
-import { IoShirtOutline, IoShirtSharp } from "react-icons/io5";
-import { MdOutlineToys } from "react-icons/md";
-import { RiHeartPulseLine, RiFireLine } from "react-icons/ri";
-import { AiOutlineHome, AiOutlinePercentage } from "react-icons/ai";
+import { ACgProfile} from "react-icons/fa";
+import { PiNotebookBold} from "react-icons/fa";
+import { MdPayment} from "react-icons/fa";
 
 const sidebarItems = [
   {
-    name: "Home",
-    href: "/",
-    icon: AiOutlineHome,
+    name: "Profile",
+    href: "/profile",
+    icon: ACgProfile,
   },
   {
-    name: "About",
-    href: "/about",
-    icon: BsPeople,
+    name: "My Learnings",
+    href: "/my-learnings",
+    icon: PiNotebookBold,
   },
   {
-    name: "Mails",
-    href: "/mails",
-    icon: FiMail,
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-    icon: TiContacts,
+    name: "Payment History",
+    href: "/payment-history",
+    icon: MdPayment,
   },
 ];
 
 export default sidebarItems;
+
+
 
